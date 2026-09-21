@@ -33,5 +33,4 @@ public class ScreenmatchApplication implements CommandLineRunner {//tarefa a ser
 	public static void main(String[] args) {
 		SpringApplication.run(ScreenmatchApplication.class, args);
 	}
-
 }
