@@ -1,5 +1,6 @@
 package br.com.spring.screenmatch;
 
+import br.com.spring.screenmatch.model.DadosEpisodios;
 import br.com.spring.screenmatch.model.DadosSerie;
 import br.com.spring.screenmatch.service.ConsumoApi;
 import br.com.spring.screenmatch.service.ConverteDados;
@@ -27,7 +28,9 @@ public class ScreenmatchApplication implements CommandLineRunner {//tarefa a ser
 		ConverteDados conversor = new ConverteDados();
 		DadosSerie dadosSerie = conversor.obterDados(json, DadosSerie.class);
 		System.out.println(dadosSerie);
-
+		var jsonEpisodios = consumoApi.obterDados(omdbApiUrl+"?t=gilmore+girls&Season=1&Episode=1&apikey=" + omdbApiKey);
+		DadosEpisodios dadosepisodios = conversor.obterDados(jsonEpisodios, DadosEpisodios.class);
+		System.out.println(dadosepisodios);
 	}
 
 	public static void main(String[] args) {
