@@ -5,6 +5,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public record OmbConfig(
-        @Value("${omdb.api.key}") String API_URL,
-        @Value("${omdb.api.url}") String API_KEY) {
+        @Value("${omdb.api.url}") String API_URL,
+        @Value("${omdb.api.key}") String API_KEY) {
 }
