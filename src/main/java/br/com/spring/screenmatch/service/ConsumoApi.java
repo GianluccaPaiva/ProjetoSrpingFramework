@@ -1,11 +1,14 @@
 package br.com.spring.screenmatch.service;
 
+import org.springframework.stereotype.Service;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+@Service
 public class ConsumoApi {
     //busca dados de uma API externa, faz uma requisição HTTP para o endereço fornecido e retorna a resposta como uma string
     public String obterDados(String endereco){
